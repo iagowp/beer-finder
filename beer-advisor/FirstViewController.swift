@@ -14,6 +14,9 @@ class FirstViewController: UIViewController {
     // array of beers
     let beers = []
     var beersIndex = 0
+    // image
+    @IBOutlet weak var viewImage: UIImageView!
+    
     
     @IBAction func DontKnow(sender: AnyObject) {
         println("You clicked the 'don't know' button!")
@@ -31,15 +34,6 @@ class FirstViewController: UIViewController {
 //    @IBAction func ratingslider(sender: AnyObject) {
 //        println("You slid!")
 //    }
-    
-    // function to rotate
-    func changeImage(newImage: String) -> Int { // Could not be a string
-    //need to link it to action
-        // set image to next image
-        // actual image = beers[++beersIndex]
-        
-        return beersIndex
-    }
     
     
     
@@ -71,45 +65,20 @@ class FirstViewController: UIViewController {
             }
         })
         downloadTask.resume()
-
-                    //let returnData = NSData(contentsOfURL: url, encoding: NSUTF8StringEncoding)
-                    
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-        
-                    
-//            let url = NSURL.URLWithString("\(returnData.imageURL)")
-//            var err: NSError?
-//            var imageData :NSData = NSData.dataWithContentsOfURL(url, options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
-//            self.questionnaireImage.image = UIImage(data: imageData)
-        
-        
-       // task.resume()
-        
- 
-        
-//        let url = NSURL.URLWithString("");
-//        var err: NSError?
-//        var imageData :NSData = NSData.dataWithContentsOfURL(url,options: NSDataReadingOptions.DataReadingMappedIfSafe, error: &err)
-//        var bgImage = UIImage(data:imageData)
         
         }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    // function to rotate
+    func changeImage(newImage: String) -> Int { // Could not be a string
+        // set image to next image
+        // actual image = beers[++beersIndex]
+        viewImage = beers[beersIndex]
+        return beersIndex
     }
 
 

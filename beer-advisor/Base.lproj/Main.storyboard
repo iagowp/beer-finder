@@ -80,8 +80,9 @@
                     </view>
                     <navigationItem key="navigationItem" title="Rate your beers!" id="kxi-88-TEI"/>
                     <connections>
-                        <outlet property="c" destination="5QP-mZ-EnU" id="vDa-17-pzN"/>
                         <outlet property="questionnaireImage" destination="5QP-mZ-EnU" id="bSk-iY-FEo"/>
+                        <outlet property="sd" destination="5QP-mZ-EnU" id="aqp-3s-zPg"/>
+                        <outlet property="viewImage" destination="5QP-mZ-EnU" id="ODc-nH-BFp"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="o51-8t-dY5" userLabel="First Responder" sceneMemberID="firstResponder"/>
