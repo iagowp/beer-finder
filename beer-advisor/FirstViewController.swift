@@ -11,6 +11,9 @@ import UIKit
 class FirstViewController: UIViewController {
     
     let beerData = BeerData()
+    // array of beers
+    let beers = []
+    var beersIndex = 0
     
     @IBAction func DontKnow(sender: AnyObject) {
         println("You clicked the 'don't know' button!")
@@ -28,6 +31,16 @@ class FirstViewController: UIViewController {
 //    @IBAction func ratingslider(sender: AnyObject) {
 //        println("You slid!")
 //    }
+    
+    // function to rotate
+    func changeImage(newImage: String) -> Int { // Could not be a string
+    //need to link it to action
+        // set image to next image
+        // actual image = beers[++beersIndex]
+        
+        return beersIndex
+    }
+    
     
     
     @IBAction func ratingsPicker(sender: UISegmentedControl) {
