@@ -12,7 +12,7 @@ class FirstViewController: UIViewController {
     
     let beerData = BeerData()
     // array of beers
-    let beers = []
+    let beers = [UIImage(named: "budweiser"), UIImage(named: "anchor")]
     var beersIndex = 0
     // image
     @IBOutlet weak var viewImage: UIImageView!
@@ -74,11 +74,9 @@ class FirstViewController: UIViewController {
     }
     
     // function to rotate
-    func changeImage(newImage: String) -> Int { // Could not be a string
-        // set image to next image
-        // actual image = beers[++beersIndex]
-        viewImage = beers[beersIndex]
-        return beersIndex
+    // right now, assume beersIndex will be updated before being called, might need to adapt it depending how we use it
+    func changeImage() {
+        viewImage.image = beers[beersIndex]
     }
 
 
